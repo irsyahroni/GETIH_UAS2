@@ -1,7 +1,10 @@
 package com.arbaini.getih;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class JadiDonorActivity extends AppCompatActivity {
 
@@ -11,5 +14,14 @@ public class JadiDonorActivity extends AppCompatActivity {
         setContentView(R.layout.activity_jadi_donor);
         getSupportActionBar().setTitle("Jadi Pendonor");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        Button donorkan = findViewById(R.id.cv_donorkan);
+
+        donorkan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(JadiDonorActivity.this,MapsActivity.class));
+            }
+        });
     }
 }
